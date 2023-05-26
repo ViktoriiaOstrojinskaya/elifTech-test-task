@@ -13,6 +13,7 @@ export const Box = styled.div`
   padding: ${(p) => p.theme.space[4]}px;
   display: grid;
   gap: ${(p) => p.theme.space[3]}px;
+  align-items: center;
 `;
 
 export const ShopWrapper = styled.div`
@@ -20,7 +21,8 @@ export const ShopWrapper = styled.div`
   border-radius: ${(p) => p.theme.radii.normal};
   border: ${(p) => p.theme.borders.normal};
   color: ${(p) => p.theme.colors.padua};
-  width: 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
 `;
 
 export const ItemWrapper = styled.div`
