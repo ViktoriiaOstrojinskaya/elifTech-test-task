@@ -1,26 +1,17 @@
 import { Outlet } from "react-router-dom";
-import styled from "styled-components";
-
-import { NavLink } from "react-router-dom";
-
-const StyledLink = styled(NavLink)`
-  color: black;
-
-  &.active {
-    color: orange;
-  }
-`;
+import { StyledLink, BoxNav, Container } from "./SharedLayout.styled";
 
 export const SharedLayout = () => {
   return (
-    <>
-      <h1>
-        <nav>
-          <StyledLink to="/shop">Shop</StyledLink>
-          <StyledLink to="/shoppingCart">ShoppingCart</StyledLink>
-        </nav>
-      </h1>
+    <Container>
+      <BoxNav>
+        <StyledLink to="/shop">Shop</StyledLink>
+        <StyledLink to="/shoppingCart">ShoppingCart</StyledLink>
+        <StyledLink to="/history">History</StyledLink>
+        <StyledLink to="/coupons">Coupons</StyledLink>
+      </BoxNav>
+
       <Outlet />
-    </>
+    </Container>
   );
 };

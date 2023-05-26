@@ -1,7 +1,12 @@
+import { ShopList } from "../components/ShopList";
+import { getListShops, getListItems } from "../fakeDB";
+
 export const Shop = () => {
+  const shops = getListShops();
+  const items = getListItems();
   return (
     <>
-      <h1>Shop</h1>
+      <ShopList shops={shops} items={items} />
     </>
   );
 };
